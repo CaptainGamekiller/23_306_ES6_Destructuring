@@ -8,9 +8,9 @@ const dog = animals[1];
 const [cat, dog] = animals; // 解構數組用[ ]以獲取物件
 
 const { name, sound } = cat; // 解構物件/變量用{ }以獲取屬性
-// name, sound必須與屬性名一致，但可以給其取名如下
-const { name = catName, sound = catSound } = cat;
-// 設置默認值。當原屬性並沒有值時。
+//"冒號"重新命名屬性名(catName, catSound)，但左側必須必須和原屬姓名一致
+const { name: catName, sound: catSound } = cat;
+//  "等號" 設置默認值。
 const { name = "默認小咪", sound = "默認喵" } = cat;
 
 // 內嵌物件feedingRequirements中的屬性food,water
